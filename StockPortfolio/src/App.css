@@ -1,0 +1,196 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background: #202020;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* #market-all {
+  overflow-y: auto;
+  overflow-x: hidden;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#header-title {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#header-title-1 {
+  font-family: fantasy;
+  color: rgb(252, 154, 8);
+  font-size: 2rem;
+}
+
+#header-title-2 {
+  font-family: fantasy;
+  color: white;
+  font-size: 1rem;
+}
+
+#totalValue {
+  color: white;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+#market-title {
+  margin-bottom: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 20px;
+  font: "Segoe UI", -apple-system, BlinkMacSystemFont;
+  font-size: 2rem;
+
+  --borderWidth: 3px;
+
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+#market-title:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+/* .scroll {
+  height: 280px;
+  overflow-y: auto;
+  overflow-x: auto;
+} */
+
+/* #market {
+  margin: 10px;
+}
+
+#market tbody {
+  height: 550px;
+  color: white;
+  overflow-y: auto;
+  overflow-x: visible;
+
+  width: 100%;
+}
+
+#market thead {
+  width: 100%;
+  color: white;
+} */
+
+/* #market-tr:hover {
+  display: block;
+  width: 1100px;
+
+  background-color: pink;
+} */
+
+#market-table {
+  margin: 0px;
+  padding: 6px;
+}
+
+#market-tbody {
+  height: 280px;
+  overflow-y: auto;
+}
+
+#rowMarket:hover {
+  background-color: #00cc99;
+}
+
+@media only screen and (max-width: 600px) {
+  #curTable thead {
+    width: 600px;
+  }
+  #curTable tbody {
+    width: 600px;
+    display: block;
+  }
+
+  .scroll {
+    width: 600px;
+  }
+  table {
+    padding: 0px;
+  }
+
+  #market {
+    width: 600px;
+    padding: 0px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #market-tbody {
+    width: 600px;
+    overflow-y: initial;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
